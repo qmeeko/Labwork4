@@ -12,7 +12,7 @@ class Car:
         Car.totalCars += 1
 
     def testDrive(self):
-        print(f"{self.name} набирает скорость {self.speed} км/ч при ускорении {self.acceleration} м/с за {self.speed/(3.6*self.acceleration)}")
+        print(f"{self.name} набирает скорость {self.speed} км/ч при ускорении {self.acceleration} м/с за {self.speed/(3.6*self.acceleration)} с")
 
     @staticmethod
     def getTotalCars(Car):
@@ -40,7 +40,7 @@ while True:
         case 1:
             while True:
                 name = input("Название:")
-                if name is None:
+                if name.replace(' ','') == '':
                     print('!ОШИБКА! Не введено название')
                 else: break
             while True:

@@ -38,9 +38,9 @@ class PoliceCar(Car):
     def __init__(self, name, color):
         super().__init__(name, color, isPolice=True)
 
-def outputMenu(carChosen):
+def outputMenu(chosenCar):
     print(f"Выберите действие:")
-    print(f"1. Выбрать автомобиль (текущий: {carChosen.name})")
+    print(f"1. Выбрать автомобиль (текущий: {chosenCar.name})")
     print(f"2. Поехать/Ускориться")
     print(f"3. Повернуть")
     print(f"4. Проверить скорость")
@@ -62,7 +62,7 @@ while True:
             print(f"!ОШИБКА! Введено неправильное значение")
         else:
             if choise < 1 or choise > 6:
-                print(f"!ОШИБКА! Выберете значение от 1 до 5")
+                print(f"!ОШИБКА! Выберете значение от 1 до 6")
             else: break
     match choise:
         case 1:
